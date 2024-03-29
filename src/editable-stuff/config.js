@@ -7,7 +7,7 @@ const navBar = {
 const mainBody = {
   gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1",
   firstName: "Akshay",
-  middleName: "",
+  middleName: "S",
   lastName: "Patil",
   message: " Passionate about changing the world with Data. ",
   icons: [
@@ -66,7 +66,7 @@ const about = {
 const repos = {
   show: true,
   heading: "Recent Projects",
-  gitHubUsername: "hashirshoaeb", //i.e."johnDoe12Gh"
+  gitHubUsername: "akshaypatil0906", //i.e."johnDoe12Gh"
   reposLength: 4,
   specificRepos: [],
 };
@@ -103,11 +103,8 @@ const skills = {
     { name: "Python", value: 90 },
     { name: "SQL", value: 75 },
     { name: "Data Structures", value: 85 },
-    { name: "C/C++", value: 65 },
-    { name: "JavaScript", value: 90 },
-    { name: "React", value: 65 },
-    { name: "HTML/CSS", value: 55 },
-    { name: "C#", value: 80 },
+    { name: "Machine Learning", value: 55 },
+    { name: "Natural Language Processing", value: 80 },
   ],
   softSkills: [
     { name: "Goal-Oriented", value: 80 },
