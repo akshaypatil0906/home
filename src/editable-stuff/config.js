@@ -127,7 +127,7 @@ const getInTouch = {
   heading: "Get In Touch",
   message:
     "I'm currently looking for full-time Software Engineering or Machine Learning opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
-  email: "hashirshoaeb@gmail.com",
+  email: "akshayspatil0906@gmail.com",
 };
 
 const experiences = {
@@ -135,14 +135,14 @@ const experiences = {
   heading: "Experiences",
   data: [
     {
-      role: 'Software Engineer',// Here Add Company Name
+      role: 'Python Developer | AI/ML Engineer',// Here Add Company Name
       companylogo: require('../assets/img/dell.png'),
-      date: 'June 2018 – Present',
+      date: 'May 2023 – Present',
     },
     {
-      role: 'Front-End Developer',
+      role: 'Data Scientist',
       companylogo: require('../assets/img/boeing.png'),
-      date: 'May 2017 – May 2018',
+      date: 'May 2019 – May 2023',
     },
   ]
 }
