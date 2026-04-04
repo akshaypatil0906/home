@@ -1,233 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Resume - Personal Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akshay Patil Resume</title>
+  <style>
+    :root {
+      --text: #222222;
+      --muted: #555555;
+      --line: #d9d9d9;
+      --heavy: #1e1e1e;
+    }
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    * {
+      box-sizing: border-box;
+    }
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    body {
+      padding: 22px 28px;
+    }
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+    .resume {
+      width: 100%;
+      max-width: 768px;
+      margin: 0 auto;
+    }
 
-  <!-- =======================================================
-  * Template Name: Personal
-  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-  * Updated: Nov 04 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      padding-top: 8px;
+    }
+
+    .name {
+      margin: 0;
+      font-size: 27px;
+      line-height: 1;
+      font-weight: 800;
+      letter-spacing: 0.1px;
+      color: #111111;
+    }
+
+    .title {
+      margin-top: 7px;
+      font-size: 12px;
+      line-height: 1.45;
+      color: #4a4a4a;
+      font-weight: 400;
+    }
+
+    .contact {
+      text-align: right;
+      font-size: 11px;
+      line-height: 1.35;
+      color: #444444;
+      padding-top: 1px;
+      min-width: 250px;
+    }
+
+    .contact a {
+      color: #2d5d8c;
+      text-decoration: none;
+    }
+
+    .top-rule {
+      margin-top: 10px;
+      border-top: 4px solid var(--heavy);
+    }
+
+    section {
+      margin-top: 18px;
+    }
+
+    .section-title {
+      margin: 0 0 11px 0;
+      font-size: 14px;
+      line-height: 1.15;
+      letter-spacing: 3px;
+      font-weight: 800;
+      color: #2a2a2a;
+      text-transform: uppercase;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--line);
+    }
+
+    p {
+      margin: 0 0 12px 0;
+      font-size: 14px;
+      line-height: 1.62;
+      color: #333333;
+    }
+
+    strong {
+      font-weight: 800;
+      color: #222222;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 30px;
+      row-gap: 0;
+      margin-top: 2px;
+    }
+
+    .skill-block {
+      margin-bottom: 10px;
+    }
+
+    .skill-heading {
+      margin: 0 0 5px 0;
+      font-size: 14px;
+      line-height: 1.25;
+      font-weight: 800;
+      color: #252525;
+    }
+
+    .skill-text {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.48;
+      color: #333333;
+      font-weight: 700;
+    }
+
+    .job {
+      margin-bottom: 10px;
+    }
+
+    .job-title {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.3;
+      font-weight: 800;
+      color: #252525;
+    }
+
+    .job-date {
+      margin: 2px 0 7px 0;
+      font-size: 14px;
+      line-height: 1.3;
+      color: #404040;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 19px;
+    }
+
+    li {
+      margin: 0 0 6px 0;
+      padding-left: 4px;
+      font-size: 14px;
+      line-height: 1.48;
+      color: #333333;
+    }
+
+    .project {
+      margin-bottom: 12px;
+    }
+
+    .project-title {
+      margin: 0 0 4px 0;
+      font-size: 14px;
+      line-height: 1.35;
+      font-weight: 800;
+      color: #252525;
+    }
+
+    .education-line {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.4;
+      font-weight: 800;
+      color: #333333;
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 0.34in;
+      }
+
+      body {
+        padding: 0;
+      }
+
+      .resume {
+        max-width: none;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+
+    @media (max-width: 700px) {
+      body {
+        padding: 18px;
+      }
+
+      .header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .contact {
+        text-align: left;
+        min-width: 0;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+    }
+  </style>
 </head>
+<body>
+  <main class="resume" aria-label="Resume">
+    <header class="header">
+      <div>
+        <h1 class="name">AKSHAY PATIL</h1>
+        <div class="title">Python Developer – AI/ML &amp; Generative AI</div>
+      </div>
+      <address class="contact">
+        Hinjewadi, Pune, India<br />
+        Phone: 7796574668<br />
+        Email: <a href="mailto:akshayspatil0906@gmail.com">akshayspatil0906@gmail.com</a><br />
+        LinkedIn: <a href="https://www.linkedin.com/in/akshay-patil0906" target="_blank" rel="noopener noreferrer">linkedin.com/in/akshay-patil0906</a>
+      </address>
+    </header>
 
-<body class="resume-page">
+    <div class="top-rule" aria-hidden="true"></div>
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    <section>
+      <h2 class="section-title">Professional Summary</h2>
+      <p>
+        Python Developer <strong>(AI/ML and Generative AI)</strong> with 4+ years of experience building
+        <strong>production-grade ML and GenAI systems</strong> using <strong>Python, Snowflake, AWS,</strong>
+        and modern LLMs.
+      </p>
+      <p>
+        Hands-on with <strong>Retrieval-Augmented Generation (RAG), chatbots, NLP pipelines,</strong>
+        and <strong>end-to-end data &amp; MLOps workflows</strong> on cloud platforms.
+      </p>
+      <p>
+        Skilled in <strong>TensorFlow, PyTorch, scikit-learn, Docker, CI/CD, Snowflake Cortex,</strong>
+        and <strong>AWS Bedrock</strong> for deploying scalable, low-latency AI services for real-world business use cases.
+      </p>
+    </section>
 
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Personal</h1>
-      </a>
+    <section>
+      <h2 class="section-title">Core Skills</h2>
+      <div class="skills-grid">
+        <div>
+          <div class="skill-block">
+            <h3 class="skill-heading">Programming &amp; Machine Learning</h3>
+            <p class="skill-text">
+              Python, scikit-learn, TensorFlow, PyTorch, XGBoost, MLflow, feature engineering, EDA,
+              supervised learning, classification, regression.
+            </p>
+          </div>
+          <div class="skill-block">
+            <h3 class="skill-heading">Cloud &amp; Data</h3>
+            <p class="skill-text">
+              Snowflake, Snowflake Cortex, Cortex Search Service, Snowpark Container Services (SPCS), PostgreSQL,
+              AWS EC2, AWS Lambda, AWS Datastream, SQS, SNS, Firehose, AWS ECR, AWS Fargate, data pipelines, ETL.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="skill-block">
+            <h3 class="skill-heading">NLP &amp; Generative AI</h3>
+            <p class="skill-text">
+              NLP, text preprocessing, tokenization, Word2Vec, BERT, transformers, LLMs, RAG, chatbot development,
+              embeddings, text generation, sentiment analysis.
+            </p>
+          </div>
+          <div class="skill-block">
+            <h3 class="skill-heading">GenAI Platforms &amp; Tooling</h3>
+            <p class="skill-text">
+              AWS Bedrock, Claude Haiku, ChatGroq, HuggingFace, Streamlit, Docker, GitHub, CI/CD.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <nav id="navmenu" class="navmenu">
+    <section>
+      <h2 class="section-title">Professional Experience</h2>
+
+      <article class="job">
+        <h3 class="job-title">Sr. Python Developer (AI/ML) – Bond.ai</h3>
+        <div class="job-date">May 2023 – Present</div>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html" class="active">Resume</a></li>
-          <!-- <li><a href="services.html">Services</a></li> -->
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li> -->
-          <li><a href="contact.html">Contact</a></li>
+          <li>Developed and maintained a <strong>modular Python codebase</strong> for multiple AI products, improving code reuse and maintainability across ML and GenAI services.</li>
+          <li>Led development and deployment of <strong>ML models</strong> with strong performance metrics, integrating them into production workflows for financial use cases.</li>
+          <li>Built an <strong>Empathy Engine</strong> ML model using <strong>TensorFlow</strong> and <strong>PyTorch</strong>, optimizing for both accuracy and efficiency on real-world customer interaction data.</li>
+          <li>Designed and implemented <strong>data pipelines</strong> using <strong>AWS Datastream</strong> and <strong>Snowflake</strong> to support model training, feature computation, and real-time inference.</li>
+          <li>Used <strong>AWS Lambda</strong> with <strong>SNS, SQS,</strong> and <strong>Firehose</strong> to create scalable, event-driven AI pipelines and integrations.</li>
+          <li>Collaborated with product, data science, and engineering teams to integrate <strong>Python, ML,</strong> and <strong>GenAI</strong> solutions into production features.</li>
+          <li>Actively used <strong>LLMs, transformers, Snowflake,</strong> and <strong>AWS</strong> services to prototype and ship new AI capabilities.</li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+      </article>
 
-    </div>
-  </header>
+      <article class="job">
+        <h3 class="job-title">Data Analyst – UGC Supply Chain Solutions Pvt Ltd</h3>
+        <div class="job-date">May 2022 – May 2023</div>
+        <ul>
+          <li>Performed <strong>exploratory data analysis (EDA)</strong> on large supply-chain datasets to identify patterns, anomalies, and optimization opportunities.</li>
+          <li>Developed <strong>predictive models</strong> using machine learning algorithms to address key business problems and improve decision-making.</li>
+          <li>Collaborated with cross-functional teams to discover <strong>data-driven insights</strong> and convert them into actionable recommendations.</li>
+          <li>Cleaned, transformed, and validated data to ensure high-quality inputs for analytics and modeling.</li>
+          <li>Created visualizations and reports to communicate findings clearly to non-technical stakeholders.</li>
+          <li>Applied statistical methods to analyze experiments and validate model performance in production-like scenarios.</li>
+        </ul>
+      </article>
+    </section>
 
-  <main class="main">
+    <section>
+      <h2 class="section-title">Projects</h2>
 
-    <!-- Page Title -->
-    <div class="page-title" data-aos="fade">
-      <div class="heading">
-        <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1>Resume</h1>
-              <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <nav class="breadcrumbs">
-        <div class="container">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Resume</li>
-          </ol>
-        </div>
-      </nav>
-    </div><!-- End Page Title -->
+      <article class="project">
+        <h3 class="project-title">Autopilot Analyst – GenAI Banking Assistant (Snowflake Cortex + Claude Haiku)</h3>
+        <ul>
+          <li>Designed and built a <strong>production-grade Autopilot analyst chatbot</strong> using <strong>Snowflake Cortex AI_COMPLETE</strong> functions integrated with <strong>Cortex Search Service</strong> for retrieval over financial and operational documents.</li>
+          <li>Used <strong>Snowpark Container Services (SPCS)</strong> for scalable compute and orchestration, authenticating via <strong>PAT token</strong> for secure access and deployment.</li>
+          <li>Implemented a <strong>RAG-based architecture</strong> that processes and interacts with <strong>PDF documents</strong> and structured data stored in <strong>Snowflake</strong>, delivering precise, context-aware answers to banking performance queries.</li>
+          <li>Orchestrated multi-step reasoning flows using <strong>Claude Haiku</strong> with carefully engineered <strong>chain-of-thought prompts</strong>, improving answer quality and transparency for analysts.</li>
+          <li>Built the UI with <strong>Streamlit</strong>, providing chat-style interaction, document upload, and analytics visualizations for end users.</li>
+          <li>Experimented with <strong>AWS Bedrock</strong> for alternative model hosting and fallback strategies, ensuring high availability and model flexibility for the Autopilot analyst.</li>
+        </ul>
+      </article>
 
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
+      <article class="project">
+        <h3 class="project-title">Bond Label Prediction – Transaction Categorization Engine</h3>
+        <ul>
+          <li>Developed a robust system to categorize <strong>diverse and unstructured transactional data</strong> at scale for banking/fintech use cases.</li>
+          <li>Used <strong>rule-based algorithms</strong> and <strong>regular expressions</strong> to automatically label around 60% of transactions with high precision.</li>
+          <li>Applied advanced NLP techniques (tokenization, TF-IDF features) with <strong>XGBoost</strong>, achieving about <strong>75% labeling accuracy</strong> on previously unlabeled data.</li>
+          <li>Explored <strong>embeddings, POS tagging,</strong> and <strong>NER</strong> to handle sparse and noisy transaction descriptions and edge cases.</li>
+          <li>Designed custom rules per transaction category, pushing accuracy to <strong>90%+</strong> for major segments and improving downstream analytics quality.</li>
+          <li>Documented approaches and findings to support future integration into broader data and analytics platforms.</li>
+        </ul>
+      </article>
 
-      <div class="container">
+      <article class="project">
+        <h3 class="project-title">Customer Sentiment Prediction and Recommendation System</h3>
+        <ul>
+          <li>Built a <strong>sentiment analysis</strong> pipeline using <strong>Python</strong> and <strong>NLTK</strong> to classify customer reviews as positive, negative, or neutral.</li>
+          <li>Achieved around <strong>87% accuracy</strong> in sentiment classification and used insights for root cause analysis of customer pain points.</li>
+          <li>Implemented a <strong>hybrid recommendation system</strong> leveraging <strong>BERT-based embeddings</strong> for better personalization.</li>
+          <li>Created visual dashboards to display sentiment and recommendation trends over time for business users.</li>
+        </ul>
+      </article>
 
-        <div class="row">
+      <article class="project">
+        <h3 class="project-title">CI/CD for End-to-End ML/GenAI Pipelines</h3>
+        <ul>
+          <li>Implemented <strong>CI/CD</strong> pipelines using <strong>GitHub</strong> and <strong>Docker</strong> to automate testing, image building, and deployment of ML/GenAI services.</li>
+          <li>Deployed containerized workloads to <strong>AWS Fargate</strong> via <strong>AWS ECR</strong>, enabling scalable, managed, and low-ops production environments.</li>
+        </ul>
+      </article>
+    </section>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Sumary</h3>
+    <section>
+      <h2 class="section-title">Education</h2>
+      <p class="education-line">B.Sc. (Computer Science) – Shivaji University</p>
+    </section>
 
-            <div class="resume-item pb-0">
-              <h4>Akshay Patil</h4>
-              <p><em>Dynamic and results-driven software developer with expertise in AI, ML
-                technologies, large language models, and data processing. Seeking a
-                challenging position to leverage my skills in developing innovative
-                solutions and intelligent systems, while contributing to cutting-edge
-                projects and driving technological advancements within a forwardthinking
-                organization.</em></p>
-              <ul>
-                <li>Pune, Maharashtra</li>
-                <li>+91 7796574668</li>
-                <li>akshayspatil0906@gmail.com</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>pursuing a Master of Science in Information Technology.</h4>
-              <h5>2024 - 2026</h5>
-              <p><em>Shivaji University, Kolhapur</em></p>
-              <p>Currently pursuing a Master’s degree focused on advanced topics in Information Technology, including software development, data management, cybersecurity, and cloud computing. Engaged in projects and coursework designed to deepen understanding of both theoretical concepts and practical applications in IT.</p>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Bachelor of Science in Computer Science</h4>
-              <h5>2016 - 2019</h5>
-              <p><em>Shivaji University, Kolhapur</em></p>
-              <p>Completed in 2019, with a strong foundation in computer science principles, including programming, data structures, algorithms, and database management.</p>
-            </div><!-- Edn Resume Item -->
-
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Python Developer (AI/ML)</h4>
-              <h5>2023 - Present</h5>
-              <p><em>Pune, Maharashtra </em></p>
-              <ul>
-                <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-                <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-                <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-                <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Graphic design specialist</h4>
-              <h5>2017 - 2018</h5>
-              <p><em>Stepping Stone Advertising, New York, NY</em></p>
-              <ul>
-                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Resume Section -->
-
+    <section>
+      <h2 class="section-title">Certifications &amp; Achievements</h2>
+      <ul>
+        <li><strong>Python Programming Certificate</strong> – HackerRank.</li>
+        <li><strong>Bharati IT Idol 2019</strong> – Mohite Institute Of Management Karad (Bharati Vidyapeeth).</li>
+        <li><strong>Soft Skill Development</strong> – KBP College Islampur, 2018.</li>
+      </ul>
+    </section>
   </main>
-
-  <footer id="footer" class="footer dark-background">
-    <div class="container">
-      <h3 class="sitename">Personal</h3>
-      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
-      <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-skype"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
-      </div>
-      <div class="container">
-        <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Personal</strong> <span>All Rights Reserved</span>
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
 </body>
-
 </html>
